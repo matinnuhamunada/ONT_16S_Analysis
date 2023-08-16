@@ -1,0 +1,11 @@
+include: "rules/common.smk"
+
+##### Target rules #####
+rule all:
+    input:
+        expand('data/processed/emu/{sample}/{sample}_{tax_db}_rel-abundance.tsv', sample=SAMPLES, tax_db=TAX_DB),
+        expand("data/interim/picrust2/{sample}/{sample}_{tax_db}_metagenome_out", sample=SAMPLES, tax_db=TAX_DB)
+
+##### Modules #####
+include: "rules/emu.smk"
+include: "rules/picrust2.smk"
