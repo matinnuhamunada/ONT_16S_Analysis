@@ -4,7 +4,7 @@ include: "rules/common.smk"
 rule all:
     input:
         expand('data/processed/emu/{sample}/{sample}_{tax_db}_rel-abundance.tsv', sample=SAMPLES, tax_db=TAX_DB),
-        expand("data/interim/picrust2/{sample}/{sample}_{tax_db}_metagenome_out", sample=SAMPLES, tax_db=TAX_DB)
+        expand("data/processed/picrust2/{sample}/{sample}_{tax_db}_metagenome_out", sample=SAMPLES, tax_db=TAX_DB)
 
 ##### Modules #####
 include: "rules/emu.smk"

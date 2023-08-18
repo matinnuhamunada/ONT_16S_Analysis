@@ -26,7 +26,7 @@ rule picrust2_pipeline:
         fasta="data/interim/picrust2/{sample}/{sample}_{tax_db}.fna",
         biom="data/interim/picrust2/{sample}/{sample}_{tax_db}.biom"
     output:
-        metagenome=directory("data/interim/picrust2/{sample}/{sample}_{tax_db}_metagenome_out")
+        metagenome=directory("data/processed/picrust2/{sample}/{sample}_{tax_db}_metagenome_out")
     log: "logs/picrust2/picrust2_pipeline/{sample}_{tax_db}.log"
     conda: "../envs/picrust2.yaml"
     threads: 24
