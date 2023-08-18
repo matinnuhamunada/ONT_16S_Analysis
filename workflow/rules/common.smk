@@ -33,3 +33,4 @@ SAMPLES = samples['sample'].to_list()
 TAX_DB = [config["EMU_PREBUILT_DB"]]
 ILLUMINA = {k: v for (k,v) in units.illumina_reads.to_dict().items()}
 NANOPORE = {k: v for (k,v) in units.nanopore_reads.to_dict().items()}
+NANOPORE_FAST5 = {k: v for (k,v) in units.nanopore_fast5.to_dict().items()}

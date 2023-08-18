@@ -1,21 +1,21 @@
-sample	unit	illumina_reads	nanopore_reads
-barcode01	1		data/raw/fastq_pass/barcode01
-barcode02	1		data/raw/fastq_pass/barcode02
-barcode03	1		data/raw/fastq_pass/barcode03
-barcode04	1		data/raw/fastq_pass/barcode04
-barcode05	1		data/raw/fastq_pass/barcode05
-barcode06	1		data/raw/fastq_pass/barcode06
-barcode07	1		data/raw/fastq_pass/barcode07
-barcode08	1		data/raw/fastq_pass/barcode08
-barcode09	1		data/raw/fastq_pass/barcode09
-barcode10	1		data/raw/fastq_pass/barcode10
-barcode11	1		data/raw/fastq_pass/barcode11
-barcode12	1		data/raw/fastq_pass/barcode12
-barcode13	1		data/raw/fastq_pass/barcode13
-barcode14	1		data/raw/fastq_pass/barcode14
-barcode15	1		data/raw/fastq_pass/barcode15
-barcode16	1		data/raw/fastq_pass/barcode16
-barcode17	1		data/raw/fastq_pass/barcode17
-barcode18	1		data/raw/fastq_pass/barcode18
-barcode19	1		data/raw/fastq_pass/barcode19
-barcode20	1		data/raw/fastq_pass/barcode20
+sample	unit	illumina_reads	nanopore_reads	nanopore_fast5
+barcode01	1		data/raw/fastq_pass/barcode01	data/raw/fast5/barcode01
+barcode02	1		data/raw/fastq_pass/barcode02	data/raw/fast5/barcode02
+barcode03	1		data/raw/fastq_pass/barcode03	data/raw/fast5/barcode03
+barcode04	1		data/raw/fastq_pass/barcode04	data/raw/fast5/barcode04
+barcode05	1		data/raw/fastq_pass/barcode05	data/raw/fast5/barcode05
+barcode06	1		data/raw/fastq_pass/barcode06	data/raw/fast5/barcode06
+barcode07	1		data/raw/fastq_pass/barcode07	data/raw/fast5/barcode07
+barcode08	1		data/raw/fastq_pass/barcode08	data/raw/fast5/barcode08
+barcode09	1		data/raw/fastq_pass/barcode09	data/raw/fast5/barcode09
+barcode10	1		data/raw/fastq_pass/barcode10	data/raw/fast5/barcode10
+barcode11	1		data/raw/fastq_pass/barcode11	data/raw/fast5/barcode11
+barcode12	1		data/raw/fastq_pass/barcode12	data/raw/fast5/barcode12
+barcode13	1		data/raw/fastq_pass/barcode13	data/raw/fast5/barcode13
+barcode14	1		data/raw/fastq_pass/barcode14	data/raw/fast5/barcode14
+barcode15	1		data/raw/fastq_pass/barcode15	data/raw/fast5/barcode15
+barcode16	1		data/raw/fastq_pass/barcode16	data/raw/fast5/barcode16
+barcode17	1		data/raw/fastq_pass/barcode17	data/raw/fast5/barcode17
+barcode18	1		data/raw/fastq_pass/barcode18	data/raw/fast5/barcode18
+barcode19	1		data/raw/fastq_pass/barcode19	data/raw/fast5/barcode19
+barcode20	1		data/raw/fastq_pass/barcode20	data/raw/fast5/barcode20
