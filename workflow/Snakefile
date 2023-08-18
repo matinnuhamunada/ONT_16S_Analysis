@@ -9,3 +9,4 @@ rule all:
 ##### Modules #####
 include: "rules/emu.smk"
 include: "rules/picrust2.smk"
+include: "rules/qc.smk"

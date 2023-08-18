@@ -29,8 +29,8 @@ rule picrust2_pipeline:
         metagenome=directory("data/interim/picrust2/{sample}/{sample}_{tax_db}_metagenome_out")
     log: "logs/picrust2/picrust2_pipeline/{sample}_{tax_db}.log"
     conda: "../envs/picrust2.yaml"
-    threads: 8
+    threads: 24
     shell:
         """
-        picrust2_pipeline.py -s {input.fasta} -i {input.biom} -o {output.metagenome} --processes {threads} --verbose 2>> {log}
+        picrust2_pipeline.py -s {input.fasta} -i {input.biom} -o {output.metagenome} --processes {threads} --verbose &>> {log}
         """

@@ -1,20 +1,8 @@
-rule concat_fastq:
-    input: 
-        fastq=lambda wildcards: NANOPORE[wildcards.sample]
-    output:
-        temp('data/interim/fastq/nanopore/{sample}.fastq.gz'),
-    conda:
-        "../envs/emu.yaml"
-    log:
-        "logs/fastq/nanopore/{sample}_concat.log"
-    shell:
-        """
-        cat {input.fastq}/*.fastq.gz > {output} 2>> {log}
-        """
+
 
 rule emu_database:
     output: 
-        db="resources/database/{tax_db}"
+        db=directory("resources/database/{tax_db}")
     conda:
         "../envs/emu.yaml"
     log:
@@ -28,7 +16,7 @@ rule emu_database:
 
 rule emu_abundance:
     input: 
-        fastq='data/interim/fastq/nanopore/{sample}.fastq.gz',
+        fastq='data/interim/qc/{sample}/nanopore/min1kb.fq',
         db="resources/database/{tax_db}"
     output:
         table='data/processed/emu/{sample}/{sample}_{tax_db}_rel-abundance.tsv',
