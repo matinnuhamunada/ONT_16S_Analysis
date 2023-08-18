@@ -28,11 +28,12 @@ rule guppy_basecalling:
         guppy = f"resources/{guppy_type}",
         fast5 = lambda wildcards: NANOPORE_FAST5[wildcards.sample]
     output: directory("data/interim/reads/{sample}")
+    threads: 4
     params:
         config = basecalling_config,
         gpu_params = gpu_params
     shell:
         """
         {input.guppy}/bin/guppy_basecaller --input_path {input.fast5} --save_path {output} \
-            {params.gpu_params} --do_read_splitting --compress_fastq {params.config}
+            {params.gpu_params} --do_read_splitting --compress_fastq {params.config} --num_callers {threads}
         """
