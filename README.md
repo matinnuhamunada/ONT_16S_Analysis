@@ -4,6 +4,11 @@
 
 This is a work in progress pipeline to process full-length 16s rRNA data from ONT.
 
+## Basecalling
+To run the basecalling:
+```bash
+snakemake --use-conda -c 16 --snakefile workflow/Basecalling.smk -n #remove -n to start the job
+```
 ## Tutorial
 ### Step 1: Clone the workflow
 
