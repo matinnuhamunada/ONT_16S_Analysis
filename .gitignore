@@ -4,3 +4,5 @@ resources/
 logs/
 .snakemake/
 .nextflow/
+.nextflow.log*
+**.ipynb_checkpoints/ 
