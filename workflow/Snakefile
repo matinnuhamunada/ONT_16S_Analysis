@@ -1,11 +1,14 @@
 include: "rules/common.smk"
 
+# Define the ranks
+SILVA_RANKS = ['superkingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species', 'tax_id']
+
 ##### Target rules #####
 rule all:
     input:
-        expand('data/processed/emu/{sample}/{sample}_{tax_db}_rel-abundance.tsv', sample=SAMPLES, tax_db=TAX_DB),
-        expand("data/processed/picrust2/{sample}/{sample}_{tax_db}_metagenome_out", sample=SAMPLES, tax_db=TAX_DB),
-        expand("data/processed/nanoclust/{sample}", sample=SAMPLES)
+        expand('data/processed/emu/emu-combined-{rank}.tsv', rank=SILVA_RANKS)
+        #expand("data/processed/picrust2/{sample}/{sample}_{tax_db}_metagenome_out", sample=SAMPLES, tax_db=TAX_DB),
+        #expand("data/processed/nanoclust/{sample}", sample=SAMPLES)
 
 ##### Modules #####
 include: "rules/emu.smk"

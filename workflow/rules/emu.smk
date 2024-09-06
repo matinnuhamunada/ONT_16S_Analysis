@@ -33,3 +33,29 @@ rule emu_abundance:
         """
         emu abundance --type {params.type} --db {input.db} --output-dir data/processed/emu/{wildcards.sample} --output-basename {wildcards.sample}_{wildcards.tax_db} --keep-files --keep-counts --keep-read-assignments --output-unclassified --threads {threads} {input.fastq} 2>> {log}
         """
+
+rule emu_copy_table:
+    input: 
+        table='data/processed/emu/{sample}/{sample}_{tax_db}_rel-abundance.tsv'
+    output:
+        table=temp('data/processed/emu/{sample}_{tax_db}_rel-abundance.tsv')
+    shell:
+        """
+        cp {input.table} {output.table}
+        """
+
+rule emu_compile:
+    input: 
+        table=expand('data/processed/emu/{sample}_{tax_db}_rel-abundance.tsv', sample=SAMPLES, tax_db=TAX_DB),
+    output:
+        table='data/processed/emu/emu-combined-{rank}.tsv',
+    conda:
+        "../envs/emu.yaml"
+    log:
+        "logs/emu/abundance/compile-{rank}.log"
+    threads: 4
+    shell:
+        """
+        echo {wildcards.rank} 
+        emu combine-outputs data/processed/emu {wildcards.rank} 2>> {log}
+        """

@@ -74,3 +74,10 @@ We can then open `http://127.0.0.1:5000` to monitor our jobs
 ![panoptes](workflow/report/figures/panoptes.png)
 
 See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/executable.html) for further snakemake CLI details.
+
+## Data Analysis
+
+Install qiime2:
+```bash
+mamba env create -n qiime2-amplicon-2024.5 --file https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2024.5-py39-linux-conda.yml
+```
