@@ -81,3 +81,8 @@ Install qiime2:
 ```bash
 mamba env create -n qiime2-amplicon-2024.5 --file https://data.qiime2.org/distro/amplicon/qiime2-amplicon-2024.5-py39-linux-conda.yml
 ```
+
+Activate qiime2:
+```bash
+mamba activate qiime2-amplicon-2024.5
+```
